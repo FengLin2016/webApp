@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>慕课网2015课程学习情况</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .component{
+            width: 50%;
+            height: 50px;
+            margin-bottom: 20px;
+            background-color: #eee;
+            color: #000;
+        }
+    </style>
+
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.fullPage.js"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      $('#fullpage').fullpage({
+         scrollBar:true,
+         sectionsColor:['#25485','#00ff00','#254587','#695684'],
+         onLeave:function(index,nextIndex,direction){
+            $(".page").eq(index-1).trigger('onLeave');
+            $(".page").eq(index-1).find(".component").trigger('onLeave');
+         },
+         afterLoad:function(index,nextIndex,direction){
+            $(".page").eq(nextIndex-1).trigger('onLoad');
+            $(".page").eq(nextIndex-1).find(".component").trigger('onLoad');
+         }
+      });
+
+      $(".page").on('onLeave',function(){
+        console.log($(this).attr("id")+"==>> onLeave");
+      });
+
+      $(".page").on('onLoad',function(){
+        console.log($(this).attr("id")+"==>> onLoad");
+      });
+
+      $(".component").on('onLeave',function(){
+            $(this).fadeOut();
+            return false;
+      });
+
+      $(".component").on('onLoad',function(){
+            $(this).fadeIn();
+             return false;
+      });
+
+    });
+    </script>
+
+    <body>
+    <!-- 用于验证 fullpage.js 切换页面，以及内容组织结构可用，组件能够进行动画 -->
+
+        <div id="h5">
+           <div id="fullpage">
+                <div class="section page" id="page-1">
+                    <div class="component">logo</div>
+                    <div class="component">dd</div>
+                </div>
+                <div class="section page" id="page-2">
+                    <div class="component">logo</div>
+                    <div class="component">dd</div>
+                </div>
+                <div class="section page" id="page-3">第三屏</div>
+                <div class="section page" id="page-4">第四屏</div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

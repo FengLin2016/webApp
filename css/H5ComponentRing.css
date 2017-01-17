@@ -1,0 +1,23 @@
+/* 环图组件样式 */
+.h5_component_ring    canvas{position: absolute;}
+.h5_component_ring   .text{text-align: center; font-size: 12px; z-index: 99; left:40%; top:50%;  position: absolute; opacity:0;-webkit-opacity:0;}
+
+.h5_component_ring-all_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-all_onLeave .text{opacity:0;-webkit-opacity:0;}
+
+.h5_component_name_ring-1 .text,.h5_component_name_ring-2 .text,.h5_component_name_ring-3 .text,.h5_component_name_ring-4 .text,.h5_component_name_ring-5 .text{transform:scale(0.6); left:20%;top:30%;  white-space: nowrap;}
+
+.h5_component_ring-1_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-1_onLeave .text{opacity:0;-webkit-opacity:0;}
+
+.h5_component_ring-2_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-2_onLeave .text{opacity:0;-webkit-opacity:0;}
+
+.h5_component_ring-3_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-3_onLeave .text{opacity:0;-webkit-opacity:0;}
+
+.h5_component_ring-4_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-4_onLeave .text{opacity:0;-webkit-opacity:0;}
+
+.h5_component_ring-5_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_ring-5_onLeave .text{opacity:0;-webkit-opacity:0;}

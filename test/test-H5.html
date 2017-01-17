@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>IT学习网2015课程学习情况</title>
+
+    <!-- 基本资源库 -->
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.fullPage.js"></script>
+
+    <!-- H5对象资源&管理内容：页-组件 -->
+    <script type="text/javascript" src="../js/H5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5.css">
+
+    <script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+
+    <style type="text/css">
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 测试内容组织功能，以及fullPage页面切换&组件切换 -->
+
+    <!-- 内容组织管理，有可能会加载若干个资源 -->
+
+    <script type="text/javascript">
+        var h5 = new H5();
+        h5.addPage('face','首页')
+                .addComponent('logo',{
+                    text:'logo',
+                    width:200,
+                    height:50,
+                    css:{opacity:0,backgroundColor:'red',textAlign:'center',lineHeight:'25px',color:'#fff'},
+                    center:true,
+                    animateIn:{opacity:1,top:100},
+                    animateOut:{opacity:0,top:20}
+                })
+                .addComponent('slogen',{
+                    text:'slogen',
+                    width:200,
+                    height:50,
+                    css:{opacity:0,backgroundColor:'red',textAlign:'center',lineHeight:'25px',color:'#fff'},
+                    center:true,
+                    animateIn:{opacity:1,top:300},
+                    animateOut:{opacity:0,top:400}
+                })
+          .addPage('desc','第二页')
+                .addComponent('logo',{
+                    text:'测试',
+                    width:200,
+                    height:50,
+                    css:{opacity:0,backgroundColor:'green',textAlign:'center',lineHeight:'25px',color:'#fff'},
+                    center:true,
+                    animateIn:{opacity:1,top:100},
+                    animateOut:{opacity:0,top:20}
+                })
+          .addPage('page-3','第三页')
+                .addComponent('logo',{
+                    text:'测试',
+                    width:200,
+                    height:50,
+                    css:{opacity:0,backgroundColor:'red',textAlign:'center',lineHeight:'25px',color:'#fff'},
+                    center:true,
+                    animateIn:{opacity:1,top:300},
+                    animateOut:{opacity:0,top:400}
+                })
+          .loader();
+    </script>
+</body>
+
+</html>

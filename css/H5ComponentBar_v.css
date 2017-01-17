@@ -1,0 +1,14 @@
+/* 垂直柱状组件样式 */
+.h5_component_bar_v {}
+.h5_component_bar_v .line{float:left; position: relative;height:100%;margin:0 15px; width:15px; font-size: 12px; white-space: nowrap;}
+.h5_component_bar_v .line .name{position:absolute;bottom:-20px; width:60px;}
+.h5_component_bar_v .line .pre{position:absolute; width:20px;text-align: center;  color:#ff0000;opacity:0;-webkit-transition: all 1s 1s;}
+.h5_component_bar_v .line .progress{position: absolute; bottom:0; float: left;height:100%; width:15px;}
+.h5_component_bar_v .line .bg{position: absolute;height:0; width:15px;-webkit-transition: all 1s .5s;}
+
+.h5_component_bar_v_onLeave .line .bg{bottom:0;height:0; opacity:0;}
+.h5_component_bar_v_onLoad .line .bg{bottom:0;height:100%; opacity:1;}
+
+.h5_component_bar_v_onLeave .line .pre{ opacity:0;}
+.h5_component_bar_v_onLoad .line .pre{ opacity:1;}
+

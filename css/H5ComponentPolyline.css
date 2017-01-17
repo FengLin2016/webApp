@@ -1,0 +1,6 @@
+/* 折线图组件样式 */
+.h5_component_polyline    canvas{position: absolute;}
+.h5_component_polyline   .text{text-align: center;  white-space: nowrap; position: absolute; transform:scale(.6);opacity:0;-webkit-opacity:0;}
+
+.h5_component_polyline_onLoad .text{opacity:1;-webkit-opacity:1; transition:all 1s 1.5s}
+.h5_component_polyline_onLeave .text{opacity:0;-webkit-opacity:0;}

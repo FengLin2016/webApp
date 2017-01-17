@@ -1,0 +1,2 @@
+H5                       页面组件加载
+H5ComponentBase          基础组件
